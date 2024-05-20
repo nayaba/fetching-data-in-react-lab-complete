@@ -7,6 +7,7 @@ import * as starshipService from './services/starshipService'
 const App = () => {
 
   const [starships, setStarships] = useState([])
+  const [searchResults, setSearchResults] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,9 +19,9 @@ const App = () => {
 
   return (
     <>
-      <h1>Hello world!</h1>
-      <StarshipSearch search={starshipService.search} />
-      <StarshipList starships={starships} />
+    <h1>Star Wars Starships</h1>
+      <StarshipSearch search={starshipService.search} setSearchResults={setSearchResults} />
+      <StarshipList starships={starships} searchResults={searchResults} />
     </>
   )
 }

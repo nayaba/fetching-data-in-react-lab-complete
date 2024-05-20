@@ -1,13 +1,14 @@
 import { useState } from "react"
 
-const StarshipSearch = ({ search }) => {
+const StarshipSearch = ({ search, setSearchResults }) => {
   const [formData, setFormData] = useState("corvette")
 
   const handleChange = () => {}
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    search(formData)
+    const found = await search(formData)
+    setSearchResults(found.results)
   }
 
   return (
