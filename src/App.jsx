@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <h1>Hello world!</h1>
-      <StarshipSearch />
+      <StarshipSearch search={starshipService.search} />
       <StarshipList starships={starships} />
     </>
   )
