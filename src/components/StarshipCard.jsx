@@ -1,6 +1,6 @@
-const StarshipCard = () => {
+const StarshipCard = ({ship}) => {
     return (
-        <h3>Card</h3>
+        <h3>{ship.name}</h3>
     )
 }
 

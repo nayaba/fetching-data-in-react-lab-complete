@@ -6,7 +6,7 @@ import * as starshipService from './services/starshipService'
 
 const App = () => {
 
-  const [starshps, setStarships] = useState([])
+  const [starships, setStarships] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +20,7 @@ const App = () => {
     <>
       <h1>Hello world!</h1>
       <StarshipSearch />
-      <StarshipList />
+      <StarshipList starships={starships} />
     </>
   )
 }
