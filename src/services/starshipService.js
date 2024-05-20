@@ -10,7 +10,7 @@ const index = async () => {
   }
 }
 
-const show = async (ship) => {
+const search = async (ship) => {
   try {
     const queryString = `\?search=${ship}`
     const res = await fetch(BASE_URL + queryString)
@@ -21,4 +21,4 @@ const show = async (ship) => {
   }
 }
 
-export {index, show}
+export {index, search}
