@@ -1,9 +1,11 @@
 import { useState } from "react"
 
 const StarshipSearch = ({ search, setSearchResults }) => {
-  const [formData, setFormData] = useState("corvette")
+  const [formData, setFormData] = useState("")
 
-  const handleChange = () => {}
+  const handleChange = (e) => {
+    setFormData(e.target.value)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -14,7 +16,7 @@ const StarshipSearch = ({ search, setSearchResults }) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" />
+        <input type="text" onChange={handleChange} />
         <button type="submit">SEARCH</button>
       </form>
     </>
