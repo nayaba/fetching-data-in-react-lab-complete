@@ -3,7 +3,7 @@ import StarshipCard from "./StarshipCard"
 const StarshipList = ({ starships }) => {
   return (
     <>
-      <h2>List</h2>
+      <h2>All Starships</h2>
       {starships.map((ship) => (
         <StarshipCard ship={ship} />
       ))}
