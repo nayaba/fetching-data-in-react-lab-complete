@@ -4,7 +4,7 @@ const index = async () => {
   try {
     const res = await fetch(BASE_URL)
     const data = await res.json()
-    console.log("Data: ", data)
+    return data
   } catch (err) {
     console.log(err)
   }
@@ -15,7 +15,7 @@ const search = async (ship) => {
     const queryString = `\?search=${ship}`
     const res = await fetch(BASE_URL + queryString)
     const data = await res.json()
-    console.log("Data: ", data)
+    return data
   } catch (err) {
     console.log(err)
   }
